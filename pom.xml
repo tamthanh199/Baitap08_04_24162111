@@ -18,7 +18,7 @@
     <packaging>war</packaging>
 
     <name>24162111_DoanThanhTam</name>
-    <description>Spring Boot 4 JSP/JSTL - CRUD Category/User</description>
+    <description>Spring Boot 4 JSP/JSTL - REST API AJAX CRUD Category Product</description>
 
     <properties>
         <java.version>26</java.version>
@@ -27,6 +27,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc</artifactId>
@@ -94,7 +95,6 @@
             <version>3.3.0-RC1</version>
         </dependency>
 
-       
         <dependency>
             <groupId>org.eclipse.angus</groupId>
             <artifactId>jakarta.mail</artifactId>
@@ -102,18 +102,28 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
         <finalName>24162111_DoanThanhTam</finalName>
+
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
                 <configuration>
                     <excludes>
                         <exclude>
@@ -123,6 +133,8 @@
                     </excludes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
+
 </project>
