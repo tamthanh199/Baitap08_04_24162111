@@ -22,10 +22,12 @@
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar">
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon">
-            </span>
+            <span class="navbar-toggler-icon"></span>
 
         </button>
 
@@ -59,7 +61,8 @@
 
                 </li>
 
-                <c:if test="${not empty sessionScope.account and sessionScope.account.role == 'ADMIN'}">
+                <c:if test="${not empty sessionScope.account
+                    and sessionScope.account.role == 'ADMIN'}">
 
                     <li class="nav-item">
 
@@ -68,6 +71,18 @@
                             href="${pageContext.request.contextPath}/admin/categories">
 
                             Category CRUD
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="${pageContext.request.contextPath}/admin/ajax/categories">
+
+                            Category AJAX
 
                         </a>
 
@@ -92,6 +107,18 @@
                             href="${pageContext.request.contextPath}/admin/product/list">
 
                             Product CRUD
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="${pageContext.request.contextPath}/admin/ajax/products">
+
+                            Product AJAX
 
                         </a>
 
